@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import logo from './assets/Logo.png'
 import "./App.css";
 import {
   GoogleAuthProvider,
