@@ -1,17 +1,17 @@
 import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 
-
 const firebaseConfig = {
-  apiKey: "AIzaSyBJWaB1W7PkVKL7TXqXJulov3egvVPNroc",
-  authDomain: "websockets-892e2.firebaseapp.com",
-  projectId: "websockets-892e2",
-  storageBucket: "websockets-892e2.appspot.com",
-  messagingSenderId: "555046578931",
-  appId: "1:555046578931:web:f56c5b6ba696a62b0be586",
-  measurementId: "G-RV291YJF2X"
-}
-const app = initializeApp(firebaseConfig)
-const auth = getAuth(app)
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID
+};
 
-export {auth, app}
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+export { auth, app };
